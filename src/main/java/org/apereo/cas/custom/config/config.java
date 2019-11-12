@@ -1,3 +1,4 @@
+/*
 package org.apereo.cas.custom.config;
 
 import org.apereo.cas.authentication.AuthenticationEventExecutionPlan;
@@ -14,9 +15,11 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+*/
 /**
  * @auth wcy on 2019/11/11.
- */
+ *//*
+
 @Configuration("config")
 @EnableConfigurationProperties(CasConfigurationProperties.class)
 public class config implements AuthenticationEventExecutionPlanConfigurer{
@@ -29,10 +32,12 @@ public class config implements AuthenticationEventExecutionPlanConfigurer{
     private ServicesManager servicesManager;
 
 
-    /**
+    */
+/**
      * 将自定义验证器注册为Bean
      * @return
-     */
+     *//*
+
     @Bean
     public AuthenticationHandler myAuthenticationHandler() {
         MyAuthenticationHandler handler = new MyAuthenticationHandler(MyAuthenticationHandler.class.getSimpleName(), servicesManager, new DefaultPrincipalFactory(), 1);
@@ -44,8 +49,11 @@ public class config implements AuthenticationEventExecutionPlanConfigurer{
         authenticationEventExecutionPlan.registerAuthenticationHandler(myAuthenticationHandler());
     }
 
-    @Bean
+  */
+/*  @Bean
     public ServiceController serviceController(){
         return new ServiceController();
-    }
+    }*//*
+
 }
+*/

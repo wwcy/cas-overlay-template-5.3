@@ -1,3 +1,4 @@
+/*
 package org.apereo.cas.custom.demo;
 
 import org.apereo.cas.authentication.AuthenticationHandlerExecutionResult;
@@ -11,9 +12,11 @@ import javax.security.auth.login.AccountNotFoundException;
 import java.security.GeneralSecurityException;
 import java.util.ArrayList;
 
+*/
 /**
  * @auth wcy on 2019/11/11.
- */
+ *//*
+
 public class MyAuthenticationHandler extends AbstractUsernamePasswordAuthenticationHandler {
 
     public MyAuthenticationHandler(String name, ServicesManager servicesManager, PrincipalFactory principalFactory, Integer order) {
@@ -32,3 +35,4 @@ public class MyAuthenticationHandler extends AbstractUsernamePasswordAuthenticat
         }
     }
 }
+*/

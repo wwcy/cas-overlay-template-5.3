@@ -81,6 +81,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>maven-ali</id>
+            <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>org.apereo.cas</groupId>
@@ -89,12 +104,6 @@
             <type>war</type>
             <scope>runtime</scope>
         </dependency>
-        <!-- service管理json配置依赖 -->
-     <!--   <dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-json-service-registry</artifactId>
-            <version>${cas.version}</version>
-        </dependency>-->
         <!--service管理 jpa配置-->
         <dependency>
             <groupId>org.apereo.cas</groupId>
@@ -102,60 +111,41 @@
             <version>${cas.version}</version>
         </dependency>
 
-        <!--<dependency>
+        <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-support-rest-authentication</artifactId>
             <version>${cas.version}</version>
         </dependency>
--->
-        <dependency>
+
+      <!--  <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-core-authentication</artifactId>
             <version>${cas.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-core-authentication-api</artifactId>
             <version>${cas.version}</version>
         </dependency>
+
         <dependency>
             <groupId>org.apereo.cas</groupId>
             <artifactId>cas-server-core-webflow</artifactId>
             <version>${cas.version}</version>
-        </dependency>
-        <!--新增支持jdbc验证-->
-        <!--<dependency>
-            <groupId>org.apereo.cas</groupId>
-            <artifactId>cas-server-support-jdbc</artifactId>
-            <version>${cas.version}</version>
         </dependency>-->
+
+        <dependency>
+            <groupId>org.apereo.cas</groupId>
+            <artifactId>cas-server-support-oauth-webflow</artifactId>
+            <version>${cas.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.47</version>
         </dependency>
-
-     <!--   <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
-            <scope>provided</scope>
-        </dependency>-->
     </dependencies>
-
-    <repositories>
-    <repository>
-        <id>maven-ali</id>
-        <url>http://maven.aliyun.com/nexus/content/groups/public//</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-            <updatePolicy>always</updatePolicy>
-            <checksumPolicy>fail</checksumPolicy>
-        </snapshots>
-    </repository>
-    </repositories>
 
 </project>
